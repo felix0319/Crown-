@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | CHCH Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/portal.css">
+</head>
+<body class="portal">
+    <div class="portal-wrapper">
+        <!-- Sidebar -->
+        <aside class="portal-sidebar">
+            <div class="sidebar-logo">
+                <h3 class="text-white">CHCH PORTAL</h3>
+            </div>
+            <div class="sidebar-user">
+                <div class="user-avatar"><img src="" alt="User"></div>
+                <div class="user-info">
+                    <h4>Loading...</h4>
+                    <p>ID: CHC/2024/0042</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="results.html"><i class="fas fa-chart-bar"></i> My Results</a>
+                <a href="payments.html"><i class="fas fa-credit-card"></i> Payments</a>
+                <a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a>
+                <a href="#" id="logout-btn" style="margin-top: 50px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main -->
+        <main class="portal-main">
+            <header class="portal-header">
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+                <h2 id="welcome-name">Welcome Back</h2>
+                <div class="portal-actions">
+                    <span class="badge badge-primary"><i class="fas fa-bell"></i> 2</span>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-icon primary"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="stat-details"><h5>Current CGPA</h5><h2>4.25</h2></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon warning"><i class="fas fa-receipt"></i></div>
+                    <div class="stat-details"><h5>Fee Balance</h5><h2>₦120k</h2></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon success"><i class="fas fa-book"></i></div>
+                    <div class="stat-details"><h5>Courses</h5><h2>8</h2></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon danger"><i class="fas fa-clock"></i></div>
+                    <div class="stat-details"><h5>Attendance</h5><h2>92%</h2></div>
+                </div>
+            </div>
+
+            <div class="d-flex gap-1">
+                <div class="card w-full">
+                    <div class="card-header"><h3>Active Courses - Semester 1</h3></div>
+                    <div class="table-responsive">
+                        <table class="portal-table">
+                            <thead>
+                                <tr><th>Code</th><th>Course</th><th>Units</th><th>Status</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>NSC 301</td><td>Medical-Surgical Nursing</td><td>4</td><td><span class="badge badge-success">Registered</span></td></tr>
+                                <tr><td>NSC 303</td><td>Pharmacology</td><td>3</td><td><span class="badge badge-success">Registered</span></td></tr>
+                                <tr><td>NSC 305</td><td>Pathopathology</td><td>3</td><td><span class="badge badge-success">Registered</span></td></tr>
+                                <tr><td>BCH 301</td><td>Clinical Biochemistry</td><td>3</td><td><span class="badge badge-success">Registered</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card" style="width: 400px;">
+                    <div class="card-header"><h3>Notices</h3></div>
+                    <div style="font-size: 0.9rem;">
+                        <div class="mb-1" style="padding-bottom: 10px; border-bottom: 1px solid var(--light-grey);">
+                            <p><strong>Exams Schedule</strong></p>
+                            <small class="text-grey">The draft exams timetable is now out.</small>
+                        </div>
+                        <div class="mb-1">
+                            <p><strong>Hostel Clearance</strong></p>
+                            <small class="text-grey">All students are to clear hostel files by June 5th.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/portal/portal-auth.js"></script>
+    <script src="/portal.js"></script>
+</body>
+</html>

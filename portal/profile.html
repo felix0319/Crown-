@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | CHCH Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/portal.css">
+</head>
+<body class="portal">
+    <div class="portal-wrapper">
+        <aside class="portal-sidebar">
+            <div class="sidebar-logo"><h3 class="text-white">CHCH PORTAL</h3></div>
+            <div class="sidebar-user">
+                <div class="user-avatar"><img src="" alt="User"></div>
+                <div class="user-info"><h4>Loading...</h4><p>ID: CHC/2024/0042</p></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="results.html"><i class="fas fa-chart-bar"></i> My Results</a>
+                <a href="payments.html"><i class="fas fa-credit-card"></i> Payments</a>
+                <a href="profile.html" class="active"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a>
+                <a href="#" id="logout-btn" style="margin-top: 50px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="portal-main">
+            <header class="portal-header">
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+                <h2>Student Profile</h2>
+                <div>
+                    <button class="btn-portal-primary" id="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+                    <button class="btn-portal-primary" id="save-profile-btn" style="display: none; background: var(--success);">Save Changes</button>
+                </div>
+            </header>
+
+            <div class="card">
+                <div class="d-flex gap-1 align-center mb-1">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 3px solid var(--secondary);">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=200" style="width: 100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h3>Adaeze Okonkwo</h3>
+                        <p class="text-grey">Final Year Student | Nursing Science</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid mt-1">
+                    <div class="form-group w-full"><label>Full Name</label><input type="text" class="form-control profile-input" value="Adaeze Okonkwo" disabled></div>
+                    <div class="form-group w-full"><label>Student ID</label><input type="text" class="form-control" value="CHC/2024/0042" disabled></div>
+                    <div class="form-group w-full"><label>Email Address</label><input type="email" class="form-control profile-input" value="adaeze.ok@student.chch.edu.ng" disabled></div>
+                    <div class="form-group w-full"><label>Phone Number</label><input type="tel" class="form-control profile-input" value="08012345678" disabled></div>
+                </div>
+
+                <div class="card-header mt-1"><h3>Academic Records</h3></div>
+                <div class="dashboard-grid">
+                    <div class="form-group w-full"><label>Faculty</label><p>College of Health Sciences</p></div>
+                    <div class="form-group w-full"><label>Department</label><p>Nursing Science</p></div>
+                    <div class="form-group w-full"><label>Current Level</label><p>300 Level</p></div>
+                    <div class="form-group w-full"><label>Enrollment Year</label><p>2022</p></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header"><h3>Security</h3></div>
+                <form class="d-flex gap-1 align-center">
+                    <div class="form-group w-full"><label>Current Password</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                    <div class="form-group w-full"><label>New Password</label><input type="password" class="form-control" placeholder="••••••••"></div>
+                    <button class="btn-portal-primary" style="margin-top: 10px;">Update</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="/portal/portal-auth.js"></script>
+    <script src="/portal.js"></script>
+</body>
+</html>

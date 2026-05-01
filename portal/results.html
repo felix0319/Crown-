@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Results | CHCH Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/portal.css">
+</head>
+<body class="portal">
+    <div class="portal-wrapper">
+        <aside class="portal-sidebar">
+            <div class="sidebar-logo"><h3 class="text-white">CHCH PORTAL</h3></div>
+            <div class="sidebar-user">
+                <div class="user-avatar"><img src="" alt="User"></div>
+                <div class="user-info"><h4>Loading...</h4><p>ID: CHC/2024/0042</p></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="results.html" class="active"><i class="fas fa-chart-bar"></i> My Results</a>
+                <a href="payments.html"><i class="fas fa-credit-card"></i> Payments</a>
+                <a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a>
+                <a href="#" id="logout-btn" style="margin-top: 50px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="portal-main">
+            <header class="portal-header">
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+                <h2>Academic Results</h2>
+                <button class="btn-portal-primary" id="download-pdf"><i class="fas fa-download"></i> Download Slip</button>
+            </header>
+
+            <div class="card">
+                <form id="results-filter" class="d-flex gap-1 align-center">
+                    <div class="form-group mb-1">
+                        <label>Session</label>
+                        <select id="session-select" class="form-control">
+                            <option value="300L">300 Level (2024/2025)</option>
+                            <option value="200L">200 Level (2023/2024)</option>
+                            <option value="100L">100 Level (2022/2023)</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-1">
+                        <label>Semester</label>
+                        <select id="semester-select" class="form-control">
+                            <option value="1ST">1st Semester</option>
+                            <option value="2ND">2nd Semester</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <div class="table-responsive">
+                    <table class="portal-table">
+                        <thead>
+                            <tr><th>S/N</th><th>Code</th><th>Course</th><th>Units</th><th>CA</th><th>Exam</th><th>Total</th><th>Grade</th><th>GP</th><th>Remark</th></tr>
+                        </thead>
+                        <tbody id="results-body">
+                            <!-- JS Inject -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-between mt-1" style="background:var(--light-bg); padding: 15px; border-radius: 8px;">
+                    <p>Semester GPA: <strong id="sem-gpa">0.00</strong></p>
+                    <p>Cumulative GPA (CGPA): <strong id="cum-gpa">4.25</strong></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header"><h3>CGPA Progression</h3></div>
+                <div class="chart-container">
+                    <div class="chart-bar" style="height: 100%;"><div class="chart-bar-fill" style="height: 74%;"></div><span class="chart-label">3.72</span><span class="chart-name">100L 1st</span></div>
+                    <div class="chart-bar" style="height: 100%;"><div class="chart-bar-fill" style="height: 77%;"></div><span class="chart-label">3.85</span><span class="chart-name">100L 2nd</span></div>
+                    <div class="chart-bar" style="height: 100%;"><div class="chart-bar-fill" style="height: 78%;"></div><span class="chart-label">3.91</span><span class="chart-name">200L 1st</span></div>
+                    <div class="chart-bar" style="height: 100%;"><div class="chart-bar-fill" style="height: 82%;"></div><span class="chart-label">4.10</span><span class="chart-name">200L 2nd</span></div>
+                    <div class="chart-bar" style="height: 100%;"><div class="chart-bar-fill" style="height: 85%;"></div><span class="chart-label">4.25</span><span class="chart-name">300L 1st</span></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/portal/portal-auth.js"></script>
+    <script src="/portal.js"></script>
+</body>
+</html>

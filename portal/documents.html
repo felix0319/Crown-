@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents | CHCH Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/portal.css">
+</head>
+<body class="portal">
+    <div class="portal-wrapper">
+        <aside class="portal-sidebar">
+            <div class="sidebar-logo"><h3 class="text-white">CHCH PORTAL</h3></div>
+            <div class="sidebar-user">
+                <div class="user-avatar"><img src="" alt="User"></div>
+                <div class="user-info"><h4>Loading...</h4><p>ID: CHC/2024/0042</p></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="results.html"><i class="fas fa-chart-bar"></i> My Results</a>
+                <a href="payments.html"><i class="fas fa-credit-card"></i> Payments</a>
+                <a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="documents.html" class="active"><i class="fas fa-file-alt"></i> Documents</a>
+                <a href="#" id="logout-btn" style="margin-top: 50px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="portal-main">
+            <header class="portal-header">
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+                <h2>Document Repository</h2>
+            </header>
+
+            <div class="dashboard-grid">
+                <div class="card">
+                    <div class="text-center">
+                        <i class="fas fa-file-pdf text-danger" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <h4>Admission Letter</h4>
+                        <p><small class="text-grey">Finalized Oct 2022</small></p>
+                        <button class="btn-portal-primary mt-1 w-full" style="padding: 10px;"><i class="fas fa-download"></i> Download</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="text-center">
+                        <i class="fas fa-id-card text-navy" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <h4>Student ID Card</h4>
+                        <p><small class="text-grey">Digital Version</small></p>
+                        <button class="btn-portal-primary mt-1 w-full" style="padding: 10px;"><i class="fas fa-download"></i> Download</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="text-center">
+                        <i class="fas fa-file-invoice-dollar text-success" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <h4>Fee Receipt</h4>
+                        <p><small class="text-grey">2024/2025 S1</small></p>
+                        <button class="btn-portal-primary mt-1 w-full" style="padding: 10px;"><i class="fas fa-download"></i> Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header"><h3>Upload New Documents</h3></div>
+                <div style="border: 2px dashed var(--light-grey); padding: 40px; border-radius: 12px; text-align: center; background: var(--light-bg);">
+                    <i class="fas fa-cloud-upload-alt text-grey" style="font-size: 4rem; margin-bottom: 15px;"></i>
+                    <h4>Drag & Drop Files Here</h4>
+                    <p class="text-grey">or click to browse from your device</p>
+                    <input type="file" style="display: none;" id="doc-upload">
+                    <button class="btn-portal-primary mt-1" onclick="document.getElementById('doc-upload').click()">Browse Files</button>
+                    <p style="margin-top: 15px;"><small class="text-grey">Supported formats: PDF, JPG, PNG (Max 5MB)</small></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/portal/portal-auth.js"></script>
+    <script src="/portal.js"></script>
+</body>
+</html>

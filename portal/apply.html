@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now | CHCH Admission Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/portal.css">
+</head>
+<body class="portal">
+    <div class="apply-wrapper">
+        <div class="apply-sidebar">
+            <h2 class="text-white">Admission 2025</h2>
+            <p>Complete your application in 5 easy steps.</p>
+            <ul class="step-list">
+                <li class="active"><span class="step-num">1</span> Personal Info</li>
+                <li><span class="step-num">2</span> Academic Info</li>
+                <li><span class="step-num">3</span> Program Select</li>
+                <li><span class="step-num">4</span> Documents</li>
+                <li><span class="step-num">5</span> Payment</li>
+            </ul>
+        </div>
+        <div class="apply-content">
+            <form id="apply-form">
+                <!-- Step 1 -->
+                <div class="step-tab active">
+                    <h3 class="mb-1">Personal Information</h3>
+                    <div class="form-group">
+                        <label>Full Name (As in O'Level Certificate)</label>
+                        <input type="text" id="full-name" class="form-control" required>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <div class="form-group w-full">
+                            <label>Date of Birth</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="form-group w-full">
+                            <label>Gender</label>
+                            <select class="form-control" required>
+                                <option value="">Select</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control" required>
+                    </div>
+                    <button type="button" class="btn-portal-primary btn-next w-full">Continue to Next Step</button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-tab">
+                    <h3 class="mb-1">Academic Qualifications</h3>
+                    <div class="form-group">
+                        <label>Highest Qualification</label>
+                        <select class="form-control" required>
+                            <option>WAEC / NECO / NABTEB</option>
+                            <option>HND / BSc</option>
+                        </select>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--grey); margin-bottom: 20px;">Provide your O'Level grades for the 5 core subjects.</p>
+                    <div id="subjects-container">
+                        <div class="d-flex gap-1 mb-1">
+                            <input type="text" class="form-control" placeholder="Subject (e.g. English)" required>
+                            <select class="form-control" style="width: 150px;" required>
+                                <option>A1</option><option>B2</option><option>B3</option><option>C4</option><option>C5</option><option>C6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <button type="button" class="btn-portal-primary btn-prev" style="background:#6B7280;">Back</button>
+                        <button type="button" class="btn-portal-primary btn-next w-full">Continue to Next Step</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-tab">
+                    <h3 class="mb-1">Program Selection</h3>
+                    <div class="form-group">
+                        <label>Course of Choice</label>
+                        <select class="form-control" required>
+                            <option>B.Sc. Nursing Science</option>
+                            <option>Doctor of Pharmacy (Pharm.D)</option>
+                            <option>Medical Lab Science</option>
+                            <option>Public Health</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Level of Entry</label>
+                        <select class="form-control" required>
+                            <option>100 Level (UTME)</option>
+                            <option>200 Level (Direct Entry)</option>
+                        </select>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <button type="button" class="btn-portal-primary btn-prev" style="background:#6B7280;">Back</button>
+                        <button type="button" class="btn-portal-primary btn-next w-full">Continue to Next Step</button>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-tab">
+                    <h3 class="mb-1">Document Upload</h3>
+                    <div class="form-group">
+                        <label>WAEC/NECO Result (PDF/JPG)</label>
+                        <input type="file" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Passport Photograph</label>
+                        <input type="file" class="form-control" required>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <button type="button" class="btn-portal-primary btn-prev" style="background:#6B7280;">Back</button>
+                        <button type="button" class="btn-portal-primary btn-next w-full">Continue to Next Step</button>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-tab">
+                    <h3 class="mb-1">Application Fee</h3>
+                    <p style="margin-bottom: 20px;">You are about to pay the non-refundable application fee of ₦15,000.</p>
+                    <div class="card" style="background:var(--light-bg);">
+                        <p><strong>Total Payable:</strong> ₦15,000.00</p>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label>Card Number</label>
+                        <input type="text" class="form-control" placeholder="4242 4242 4242 4242">
+                    </div>
+                    <div class="d-flex gap-1">
+                        <button type="button" class="btn-portal-primary btn-prev" style="background:#6B7280;">Back</button>
+                        <button type="button" class="btn-portal-primary btn-next w-full">Submit My Application</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/portal/portal-auth.js"></script>
+    <script src="/portal.js"></script>
+</body>
+</html>

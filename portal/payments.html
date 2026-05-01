@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Payments | CHCH Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/portal.css">
+</head>
+<body class="portal">
+    <div class="portal-wrapper">
+        <aside class="portal-sidebar">
+            <div class="sidebar-logo"><h3 class="text-white">CHCH PORTAL</h3></div>
+            <div class="sidebar-user">
+                <div class="user-avatar"><img src="" alt="User"></div>
+                <div class="user-info"><h4>Loading...</h4><p>ID: CHC/2024/0042</p></div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="results.html"><i class="fas fa-chart-bar"></i> My Results</a>
+                <a href="payments.html" class="active"><i class="fas fa-credit-card"></i> Payments</a>
+                <a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a>
+                <a href="#" id="logout-btn" style="margin-top: 50px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="portal-main">
+            <header class="portal-header">
+                <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+                <h2>Bursary & Payments</h2>
+            </header>
+
+            <div class="dashboard-grid">
+                <div class="card" style="grid-column: span 2; margin-bottom: 0;">
+                    <h3>Fees Summary (2024/2025)</h3>
+                    <div class="d-flex justify-between mt-1">
+                        <div><p>Total Payable</p><h4>₦470,000</h4></div>
+                        <div><p>Amount Paid</p><h4 class="text-success">₦350,000</h4></div>
+                        <div><p>Balance</p><h4 class="text-danger">₦120,000</h4></div>
+                    </div>
+                </div>
+                <div class="stat-card" style="grid-column: span 2;">
+                    <div class="stat-icon success"><i class="fas fa-check-double"></i></div>
+                    <div class="stat-details"><h5>Payment Status</h5><h2 class="text-success">PARTIAL</h2></div>
+                </div>
+            </div>
+
+            <div class="card mt-1">
+                <div class="card-header"><h3>Make a Payment</h3></div>
+                <div class="d-flex gap-1">
+                    <div class="form-group w-full">
+                        <label>Select Purpose</label>
+                        <select id="pay-purpose" class="form-control">
+                            <option>Balance - 300L Tuition</option>
+                            <option>Hostel Accommodation</option>
+                            <option>Registration Fee</option>
+                        </select>
+                    </div>
+                    <div class="form-group w-full">
+                        <label>Amount (₦)</label>
+                        <input type="number" id="pay-amount" class="form-control" value="120000">
+                    </div>
+                </div>
+                <div class="card" style="background:#F9FAFB; border: 1px dashed var(--secondary);">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" class="form-control" placeholder="4242 4242 4242 4242">
+                    </div>
+                    <div class="d-flex gap-1">
+                        <div class="form-group w-full"><label>Expiry</label><input type="text" class="form-control" placeholder="MM/YY"></div>
+                        <div class="form-group w-full"><label>CVV</label><input type="password" class="form-control" placeholder="***"></div>
+                    </div>
+                    <button class="btn-portal-primary w-full" id="confirm-payment">Pay Securely Now</button>
+                    <p class="text-center mt-1"><small class="text-grey"><i class="fas fa-lock"></i> Secured by CHCH Pay-Gate. Demo Only.</small></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header"><h3>Payment History</h3></div>
+                <div class="table-responsive">
+                    <table class="portal-table">
+                        <thead>
+                            <tr><th>Date</th><th>Description</th><th>Amount</th><th>Method</th><th>Ref</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2024-10-15</td><td>Tuition - 1st Installment</td><td>₦150k</td><td>Card</td><td>TXN-773</td><td><span class="badge badge-success">Successful</span></td></tr>
+                            <tr><td>2024-11-20</td><td>Hostel Fee</td><td>₦85k</td><td>Bank</td><td>TXN-992</td><td><span class="badge badge-success">Successful</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/portal/portal-auth.js"></script>
+    <script src="/portal.js"></script>
+</body>
+</html>

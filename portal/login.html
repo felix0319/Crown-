@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login | CHCH Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/portal.css">
+    <style>
+        body.login-bg {
+            background: linear-gradient(135deg, #0A1F44 0%, #153266 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-card {
+            background: #FFF;
+            padding: 40px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="login-bg">
+    <div class="login-card">
+        <h2 style="color: #0A1F44; margin-bottom: 5px;">CROWN HERITAGE</h2>
+        <p style="color: #6B7280; font-size: 0.9rem; margin-bottom: 30px;">Digital Student Portal</p>
+        
+        <div style="background: #FEF6E7; padding: 15px; border-radius: 8px; margin-bottom: 25px; text-align: left;">
+            <small style="color: #F59E0B; font-weight: 700; display: block; margin-bottom: 5px;">DEMO CREDENTIALS</small>
+            <p style="margin: 0; font-size: 0.85rem;"><strong>ID:</strong> CHC/2024/0042</p>
+            <p style="margin: 0; font-size: 0.85rem;"><strong>Pass:</strong> student123</p>
+        </div>
+
+        <form id="login-form">
+            <div class="form-group" style="text-align: left;">
+                <label>Student ID / Application Ref</label>
+                <input type="text" id="student-id" class="form-control" placeholder="e.g. CHC/2024/0042" required>
+            </div>
+            <div class="form-group" style="text-align: left;">
+                <label>Password</label>
+                <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+            </div>
+            <div style="text-align: right; margin-bottom: 20px;">
+                <a href="#" style="font-size: 0.85rem; color: #0A1F44;">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn-portal-primary w-full" style="padding: 15px;">Login to Portal</button>
+        </form>
+
+        <p style="margin-top: 30px; font-size: 0.9rem;">
+            New Student? <a href="apply.html" style="color: #C9A84C; font-weight: 600;">Apply Here</a>
+        </p>
+        <p style="margin-top: 20px;"><a href="../index.html" style="font-size: 0.85rem; color: #6B7280;"><i class="fas fa-arrow-left"></i> Back to Website</a></p>
+    </div>
+
+    <script src="/portal/portal-auth.js"></script>
+    <script src="/portal.js"></script>
+</body>
+</html>
